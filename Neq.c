@@ -30,7 +30,6 @@ for (j=1; j*dist<=MAX ;j++)
   
 }
 
-
 fclose(output);
 //fclose(out);
 }
@@ -46,7 +45,7 @@ int i;
         for (i=0; i<N; i++) yy[i]=y[i]+h2*c2[i];
         f(x+h2,yy,c3);
         for (i=0; i<N; i++) yy[i]=y[i]+step*c3[i];
-        f(x+step,yy,c4);
+        f(x+dist,yy,c4);
         for (i=0; i<N; i++)
           y[i]+=step*(c1[i]+2.0*c2[i]+2.0*c3[i]+c4[i])/6.0;
 
