@@ -14,14 +14,14 @@ FILE *out;
 //FILE *outputtttt;
 
 void runge4( double x, double *y, double step);
-
-void f( double x, double *y, double *yp);
+void f( double x, double *y, double *yp); 
 
 void main()
 {
-double t, y[N];
+
+double x, y[N];
 int j, i;
- 
+
 output=fopen("numerico.dat", "w");
 out=fopen("analitico.dat", "w");
 
@@ -31,8 +31,8 @@ fprintf(output, "0\t%f\n", y[0]);
 
 for (j=1; j*dist<=MAX ;j++)
 {
-   t=j*dist;
-   runge4(t, y, dist);
+   x=j*dist;
+   runge4(x, y, dist);
 
    fprintf(output, "%f\t%f\n", t, y[0]);
    fprintf(out, "%lf %lf\n",t, 2.0*cos(sqrt(0.2)*t));
