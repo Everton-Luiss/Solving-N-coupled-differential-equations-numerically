@@ -9,15 +9,21 @@
 void main()
 {
 FILE *output, *out;
-double x, y[N];
+double x, y[N], S, V;
 int j;
 
 output = fopen("numerico.dat", "w");
 //out=fopen("analitico.dat", "w");
 
-	y[0]=2.0;
-	y[1]=0;
+printf("Type initial position: ");
+scanf("%lf", &S);
 
+printf("Type initial velocity: ");
+scanf("%lf", &V);
+//printf("How many coupled equations?: ")
+	
+S = y[0];
+V = y[1];
 fprintf(output, "0\t%f\n", y[0]);
 
 for (j=1; j*dist<=MAX ;j++)
