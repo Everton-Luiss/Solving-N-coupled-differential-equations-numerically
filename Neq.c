@@ -6,7 +6,7 @@
 #define dist 0.01
 #define MAX 30.0
 //void runge4( double x, double *y, double step);
-void f( double x, double *y, double *yp);
+//void f( double x, double *y, double *yp);
 
 void main()
 {
@@ -57,6 +57,6 @@ int i;
       f(x+h2,yy,c3);
       for (i=0; i<N; i++) yy[i]=y[i]+step*c3[i];
       f(x+step,yy,c4);
-      for (i=0; i<N; i++);
+      for (i=0; i<N; i++)
       y[i]+=step*(c1[i]+2.0*c2[i]+2.0*c3[i]+c4[i])/6.0;
 }
