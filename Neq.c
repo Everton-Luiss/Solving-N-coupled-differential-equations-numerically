@@ -5,31 +5,25 @@
 #define N 2
 #define dist 0.01
 #define MAX 30.0
-//void runge4( double x, double *y, double step);
-//void f( double x, double *y, double *yp);
 
 void main()
 {
 FILE *output, *out;
-double x, y[N], S, V;
-int j;
+double x, y[N];
+int j, p;
 
 output = fopen("numerico.dat", "w");
-//out = fopen("analitico.dat", "w");
 
-printf("Type initial position: ");
-scanf("%lf", &S);
-
-printf("Type initial velocity: ");
-scanf("%lf", &V);
-//printf("How many coupled equations?: ")
-	
-y[0] = S;
-y[1] = V;
+for(p=0; p<N; p++)
+   {
+   printf("Type initial condition for y[%d] = ", p);
+   scanf("%lf", &y[p]);
+   print
+   }
 
 fprintf(output, "0\t%f\n", y[0]);
-printf("S0 = %g\n", S);
-printf("V0 = %g\n", V);
+//printf("S0 = %g\n", S);
+//printf("V0 = %g\n", V);
 
 for (j=1; j*dist<=MAX; j++)
 {
@@ -37,12 +31,10 @@ for (j=1; j*dist<=MAX; j++)
    runge4(x, y, dist);
 
    fprintf(output, "%f\t%f\n", x, y[0]);
-   //fprintf(out, "%f\t%f\n", x, 2.0*cos(sqrt(0.2)*x));
   
 }
 
 fclose(output);
-//fclose(out);
 }
 
 void runge4( double x, double *y, double step)
