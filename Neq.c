@@ -5,28 +5,19 @@
 #define N 2
 #define dist 0.01
 #define MAX 30.0
- 
-FILE *output;
-FILE *out;
-
-//FILE *outputtt;
-//FILE *outputttt;
-//FILE *outputtttt;
-
-void runge4( double x, double *y, double step);
-void f( double x, double *y, double *yp); 
 
 void main()
 {
-
+FILE *output, *out;
 double x, y[N];
-int j, i;
+int j;
 
-output=fopen("numerico.dat", "w");
-out=fopen("analitico.dat", "w");
+output = fopen("numerico.dat", "w");
+//out=fopen("analitico.dat", "w");
 
 	y[0]=2.0;
 	y[1]=0;
+
 fprintf(output, "0\t%f\n", y[0]);
 
 for (j=1; j*dist<=MAX ;j++)
@@ -34,14 +25,14 @@ for (j=1; j*dist<=MAX ;j++)
    x=j*dist;
    runge4(x, y, dist);
 
-   fprintf(output, "%f\t%f\n", t, y[0]);
-   fprintf(out, "%lf %lf\n",t, 2.0*cos(sqrt(0.2)*t));
+   fprintf(output, "%f\t%f\n", x, y[0]);
+   //fprintf(out, "%lf %lf\n",x, 2.0*cos(sqrt(0.2)*x));
   
 }
 
 
 fclose(output);
-fclose(out);
+//fclose(out);
 }
 
 void runge4( double x, double *y, double step)
