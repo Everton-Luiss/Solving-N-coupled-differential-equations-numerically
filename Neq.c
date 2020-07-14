@@ -13,7 +13,7 @@ double x, y[N], S, V;
 int j;
 
 output = fopen("numerico.dat", "w");
-//out=fopen("analitico.dat", "w");
+out = fopen("analitico.dat", "w");
 
 printf("Type initial position: ");
 scanf("%lf", &S);
@@ -35,12 +35,12 @@ for (j=1; j*dist<=MAX ;j++)
    runge4(x, y, dist);
 
    fprintf(output, "%f\t%f\n", x, y[0]);
-   //fprintf(out, "%lf %lf\n",x, 2.0*cos(sqrt(0.2)*x));
+   //fprintf(out, "%f\t%f\n", x, 2.0*cos(sqrt(0.2)*x));
   
 }
 
 fclose(output);
-//fclose(out);
+fclose(out);
 }
 
 void runge4( double x, double *y, double step)
