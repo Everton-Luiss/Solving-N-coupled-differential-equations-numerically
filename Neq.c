@@ -21,8 +21,7 @@ for(p=0; p<N; p++)
    }
 
 fprintf(output, "0\t%f\n", y[0]);
-print("Digite seu nome: ")
-djhjahj
+
 //printf("S0 = %g\n", S);
 //printf("V0 = %g\n", V);
 
