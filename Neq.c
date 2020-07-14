@@ -18,10 +18,11 @@ for(p=0; p<N; p++)
    {
    printf("Type initial condition for y[%d] = ", p);
    scanf("%lf", &y[p]);
-   print
    }
 
 fprintf(output, "0\t%f\n", y[0]);
+print("Digite seu nome: ")
+djhjahj
 //printf("S0 = %g\n", S);
 //printf("V0 = %g\n", V);
 
