@@ -24,7 +24,10 @@ scanf("%lf", &V);
 	
 y[0] = S;
 y[1] = V;
+
 fprintf(output, "0\t%f\n", y[0]);
+printf("S0 = %g\n", S);
+printf("V0 = %g\n", V);
 
 for (j=1; j*dist<=MAX ;j++)
 {
