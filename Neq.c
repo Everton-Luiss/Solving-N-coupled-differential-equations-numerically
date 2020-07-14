@@ -22,8 +22,8 @@ printf("Type initial velocity: ");
 scanf("%lf", &V);
 //printf("How many coupled equations?: ")
 	
-S = y[0];
-V = y[1];
+y[0] = S;
+y[1] = V;
 fprintf(output, "0\t%f\n", y[0]);
 
 for (j=1; j*dist<=MAX ;j++)
