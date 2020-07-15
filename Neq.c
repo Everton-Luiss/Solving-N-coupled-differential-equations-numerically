@@ -13,7 +13,7 @@ double x, y[N];
 int j, p;
 
 output = fopen("numerico.dat", "w");
-
+//initial conditions
 for(p=0; p<N; p++)
    {
    printf("Type initial condition for y[%d] = ", p);
@@ -26,17 +26,15 @@ fprintf(output, "0\t%f\n", y[0]);
 //printf("V0 = %g\n", V);
 
 for (j=1; j*dist<=MAX; j++)
-{
+   {
    x=j*dist;
    runge4(x, y, dist);
-
-   fprintf(output, "%f\t%f\n", x, y[0]);
-  
-}
+   fprintf(output, "%f\t%f\n", x, y[0]); 
+   }
 
 fclose(output);
 }
-
+//Integrador
 void runge4( double x, double *y, double step)
 {
 double c1[N],c2[N],c3[N],c4[N],yy[N],h2=step/2.0;
