@@ -1,4 +1,4 @@
-## Solving a set of N coupled differential equations
+## Solving N coupled differential equations numerically
 In the daily life of a scientist it is usual to come across with second order diferential equations. If you are here then you probably have a second order differential equation to solve. I hope that this program can help you!
 ### Usage example 
 This program is able to solve a set of **N** first order differential coupled equations, but in order to illustrate how it works we consider a simple example of just **N = 2** coupled equations. The case discussed here is the simple harmonic oscillator. For this example you must follow the following steps:
