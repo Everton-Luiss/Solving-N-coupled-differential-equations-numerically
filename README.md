@@ -20,7 +20,7 @@ To see how it is written into program [click here](https://github.com/Everton-Lu
 ### How it works?
 To solve the set of diferrential equations we used the fourth order Runge-Kutta method. This method finds approximate value of **x** for a given time **t**. Only first order ordinary differential equations can be solved by using the Runge Kutta 4th order method. To learn more about the Runge-Kutta method [click here](https://pt.wikipedia.org/wiki/M%C3%A9todo_de_Runge-Kutta).
 
-###Problems?
+### Problems?
 If you find any issue, please report it.
 ***
 Desenvolvido por Everton Silva
