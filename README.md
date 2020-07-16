@@ -1,8 +1,8 @@
 ## Solving N coupled differential equations numerically
 In the daily life of a scientist it is usual to come across with second order diferential equations. If you are here then you probably have a second order differential equation to solve. I hope that this program can help you!
 ### Usage example 
-This program is able to solve a set of **N** first order differential coupled equations, but in order to illustrate how it works we consider a simple example of just **N = 2** coupled equations. The case discussed here is the simple harmonic oscillator. For this example you must follow the following steps:
-- **Step 1:** Convert your second order differenttial equation into a set of two ordinary differential equations. In the image bellow I illustrate this procedure considering the harmonic oscillator case
+This program is able to solve a set of **N** first order differential coupled equations, but in order to illustrate how it works I consider a simple example of just **N = 2** coupled equations. The case discussed here is the simple harmonic oscillator. For this example you must follow the following steps:
+- **Step 1:** Convert your second order differenttial equation into a set of two first order differential equations. In the image bellow I illustrate this procedure considering the harmonic oscillator case
 ***
 ![diff](https://user-images.githubusercontent.com/68023745/87543533-4dfe2600-c67b-11ea-8f7f-ba12782bfe4b.png)
 
@@ -18,7 +18,7 @@ To see how it is written into program [click here](https://github.com/Everton-Lu
 -**Step 4:** Be happy! Your problems are now solved!
 
 ### How it works?
-To solve the set of diferrential equations we used the fourth order Runge-Kutta method. This method finds approximate value of **x** for a given time **t**. Only first order ordinary differential equations can be solved by using the Runge Kutta 4th order method. To learn more about the Runge-Kutta method [click here](https://pt.wikipedia.org/wiki/M%C3%A9todo_de_Runge-Kutta).
+To solve the set of diferrential equations I used the fourth order Runge-Kutta method. This method finds approximate value of **x** for a given time **t**. Only first order ordinary differential equations can be solved by using the Runge Kutta 4th order method. To learn more about the Runge-Kutta method [click here](https://pt.wikipedia.org/wiki/M%C3%A9todo_de_Runge-Kutta).
 
 ### Problems?
 If you find any issue, please report it.
