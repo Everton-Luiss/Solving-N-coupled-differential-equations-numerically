@@ -13,6 +13,8 @@ double x, y[N];
 int j, p;
 
 output = fopen("numerico.dat", "w");
+//out = fopen("analitico.dat", "w")
+
 //initial conditions
 for(p=0; p<N; p++)
    {
@@ -29,10 +31,12 @@ for (j=1; j*dist<=MAX; j++)
    {
    x=j*dist;
    runge4(x, y, dist);
-   fprintf(output, "%f\t%f\n", x, y[0]); 
+   fprintf(output, "%f\t%f\n", x, y[0]);
+  // fprintf(out, "%f %f\n", x, 2.0*cos(sqrt(0.2)*t))
    }
 
 fclose(output);
+//fclose(out);
 }
 //Integrador
 void runge4( double x, double *y, double step)
