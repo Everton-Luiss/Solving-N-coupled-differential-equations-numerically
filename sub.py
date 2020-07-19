@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib.animation as animation
 import sys
 
 x1, y1 = np.loadtxt("numerico.dat",unpack=True)
@@ -20,6 +21,6 @@ ax1.set_title('Resultado numérico', color='orange')
 
 plt.xlabel('t')
 
-fig.suptitle('Regime flutuativo')
+#fig.suptitle('Regime flutuativo')
 
 plt.show()
